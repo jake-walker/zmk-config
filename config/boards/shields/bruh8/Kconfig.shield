@@ -1,0 +1,2 @@
+config SHEILD_BRUH8
+  def_bool $(shields_list_contains,bruh8)

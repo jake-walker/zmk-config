@@ -1,0 +1,6 @@
+if SHEILD_BRUH8
+
+config ZMK_KEYBOARD_NAME
+  default "bruh8"
+
+endif
