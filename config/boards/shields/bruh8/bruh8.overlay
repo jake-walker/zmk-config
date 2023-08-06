@@ -1,8 +1,28 @@
-#include <dt-bindings/zmk/matrix_transform.h>
+&gpio0 {
+	status = "okay";
+};
 
 / {
   chosen {
     zmk,kscan = &kscan0;
+    zmk,backlight = &backlight;
+  };
+
+  backlight: gpioleds {
+    compatible = "gpio-leds";
+    label = "Onboard LEDs";
+    led_0 {
+      gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;
+      label = "Red LED";
+    };
+    led_1 {
+      gpios = <&gpio0 30 GPIO_ACTIVE_LOW>;
+      label = "Green LED";
+    };
+    led_2 {
+      gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+      label = "Blue LED";
+    };
   };
 
   kscan0: kscan_0 {
